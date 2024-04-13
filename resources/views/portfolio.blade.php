@@ -20,7 +20,7 @@
         <nav class="w-full max-w-5xl mx-auto flex justify-end pt-4 pr-4 print:hidden mb-4" role="navigation" aria-label="Main">
             <ul class="space-x-4 bg-zinc-900 dark:bg-zinc-200 rounded-full px-3 py-1 flex items-center">
                 <li>
-                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://kennethsolomon.com">
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="/">
                         <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -43,7 +43,7 @@
         </nav>
         <main id="main" class="flex-grow leading-relaxed w-full max-w-5xl mx-auto">
             <div class="mt-4 mx-4">
-                <h1 class="text-6xl text-zinc-800 dark:text-zinc-300 font-semibold mb-12 font-jolly">
+                <h1 class="text-5xl md:text-6xl text-zinc-800 dark:text-zinc-300 font-semibold mb-12 font-jolly">
                     Hi, I'm Kenneth!
                 </h1>
 
@@ -51,30 +51,18 @@
                     <nav class="mt-8">
                         <div class="flex justify-between items-baseline">
                             <h2 class="text-2xl text-zinc-700 dark:text-zinc-400 mb-2 font-serif">Latest blog posts</h2>
-                            <a href="https://kennethsolomon.com/posts" aria-label="Read some of my other blog posts." class="text-lg text-teal-500 hover:text-teal-600 font-serif">Browse all blog posts</a>
+                            <a href="/posts" aria-label="Read some of my other blog posts." class="text-lg text-teal-500 hover:text-teal-600 font-serif">Browse all blog posts</a>
                         </div>
                         <ul class="mt-4 grid md:grid-cols-3 gap-6">
-                            <li>
-                                <a href="#" class="block w-full h-full">
-                                    <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">Why You Should Attend Laracon</h3>
-                                    <span class="text-xs text-zinc-700 dark:text-zinc-500">08/02/2024</span>
-                                    <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">There are many reasons to attend Laracon, but one stands out head and shoulders above the rest. Let me explain…</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="block w-full h-full">
-                                    <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">My PHPStorm Setup</h3>
-                                    <span class="text-xs text-zinc-700 dark:text-zinc-500">06/10/2023</span>
-                                    <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">I often get questions about my setup in PHPStorm, so here is a quick primer on how I set up my IDE.</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="block w-full h-full">
-                                    <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">Prompting for missing input in Artisan commands</h3>
-                                    <span class="text-xs text-zinc-700 dark:text-zinc-500">02/02/2023</span>
-                                    <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">In the past, I've talked about having fallback prompts for arguments in CLI apps. Now, Laravel can do the heavy lifting for you! Let's take a look.</p>
-                                </a>
-                            </li>
+                            @foreach($posts as $post)
+                                <li>
+                                    <a href="/posts/{{$post['id']}}/{{$post['slug']}}" class="block w-full h-full">
+                                        <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">{{$post['title']}}</h3>
+                                        <span class="text-xs text-zinc-700 dark:text-zinc-500">{{$post['publish_date']}}</span>
+                                        <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">{{$post['excerpt']}}</p>
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </nav>
                 </div>
@@ -119,7 +107,7 @@
         <footer class="mt-12 mb-6 w-full max-w-5xl mx-auto flex flex-col items-center justify-center px-4 print:hidden">
             <ul class="flex items-baseline space-x-4">
                 <li>
-                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://kennethsolomon.com">
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="/">
                         <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-teal-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>

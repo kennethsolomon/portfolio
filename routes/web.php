@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\PostController;
+use App\Http\Resources\WinkPostResource;
 use Illuminate\Support\Facades\Route;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
@@ -42,16 +45,21 @@ use Torchlight\Block;
 
 require __DIR__.'/auth.php';
 
-Route::get('/', function (Block $block) {
-    $html = WinkPost::first()->body;
-    $environment = new Environment();
+//Route::get('/', function (Block $block) {
+////    $html = WinkPost::first()->body;
+////    $environment = new Environment();
+////
+////    $environment->addExtension(new CommonMarkCoreExtension());
+////    $environment->addExtension(new GithubFlavoredMarkdownExtension());
+////    $environment->addExtension(new TorchlightExtension());
+////
+////    $converter = new MarkdownConverter($environment);
+////    $converted = $converter->convert($html);
+//
+//    return view('portfolio');
+//});
 
-    $environment->addExtension(new CommonMarkCoreExtension());
-    $environment->addExtension(new GithubFlavoredMarkdownExtension());
-    $environment->addExtension(new TorchlightExtension());
-
-    $converter = new MarkdownConverter($environment);
-    $converted = $converter->convert($html);
-
-    return view('portfolio', compact('converted'));
-});
+Route::get('/', PortfolioController::class)->name('home');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::post('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/{id}/{slug}', [PostController::class, 'show'])->name('posts.show');
