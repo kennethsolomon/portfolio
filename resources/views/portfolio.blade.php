@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://kennethsolomon.com">
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://pinkary.com/@kennethsolomon">
                         <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -85,6 +85,7 @@
                             makes this field endlessly fascinating to me.</p>
                         <p class="text-zinc-800 dark:text-zinc-400 mt-3">My favourite part of developing software is that feeling when, perhaps after several refactors and a few too many cups
                             of tea, you find the perfect architecture for the task at hand.</p>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">In addition to building web applications, I specialize in API integration. I have experience working with APIs from platforms such as HubSpot, Cin7, Dropbox, Xero, and more. Integrating these APIs seamlessly into web applications allows for enhanced functionality and streamlined workflows, providing users with a cohesive experience across multiple platforms.</p>
                         <h2 class="text-2xl font-serif mt-5">Why is your site so basic?</h2>
                         <p class="text-zinc-800 dark:text-zinc-400 mt-3">This website serves as my digital playground—a canvas where I can share my thoughts, ideas, and tutorials with the world.
                             I've intentionally kept the design simple and minimalist for a specific reason: speed. By prioritizing simplicity,
@@ -95,7 +96,7 @@
                             "Here's what I have to offer; take it or leave it."</p>
                         <p class="text-zinc-800 dark:text-zinc-400 mt-3">Feel free to check
                             them out (or don't, you have free will). If you want to reach out and chat code, I'm all ears! You can reach me at any
-                            of my links listed <a class="text-teal-500" href="https://pinkary.com/@LukeDowning19">here</a>.</p>
+                            of my links listed <a class="text-teal-500" href="https://pinkary.com/@kennethsolomon">here</a>.</p>
                         <h2 class="text-2xl font-serif mt-5">Fun facts about me ☕</h2>
                         <p class="text-zinc-800 dark:text-zinc-400 mt-3">Beyond coding, I have a few other interests that keep me busy. I love hosting podcasts, where I get to explore topics beyond
                             the realm of programming. Occasionally, I also dabble in video editing, adding another creative dimension to my skill set. And when it's time to unwind, you'll often find
@@ -117,7 +118,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://pinkary.com/@LukeDowning19">
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://pinkary.com/@kennethsolomon">
                         <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-pink-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>

@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li>
-                <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://kennethsolomon.com">
+                <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://pinkary.com/@kennethsolomon">
                     <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <g>
                             <path fill="none" d="M0 0h24v24H0z"></path>
@@ -59,7 +59,7 @@
                 </a>
             </li>
             <li>
-                <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://pinkary.com/@LukeDowning19">
+                <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://pinkary.com/@kennethsolomon">
                     <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-pink-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <g>
                             <path fill="none" d="M0 0h24v24H0z"></path>
