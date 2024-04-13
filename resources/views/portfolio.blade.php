@@ -1,50 +1,166 @@
-@php
-    use Wink\WinkPost;
-
-    $html =  WinkPost::first()->content;
-
-@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+        <title>Kenneth Solomon</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
-    <style>
-        /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-    </style>
-</head>
-<body class="antialiased">
-    <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-        @if (Route::has('login'))
-            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                @auth
-                    <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                @else
-                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                    @endif
-                @endauth
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.cdnfonts.com/css/jolly-lodger" rel="stylesheet">
+    </head>
+    <body background="{{url('bg.jpg')}}" class="bg-repeat md:bg-no-repeat md:bg-cover   print:bg-transparent dark:bg-zinc-900 ">
+        <nav class="w-full max-w-5xl mx-auto flex justify-end pt-4 pr-4 print:hidden mb-4" role="navigation" aria-label="Main">
+            <ul class="space-x-4 bg-zinc-900 dark:bg-zinc-200 rounded-full px-3 py-1 flex items-center">
+                <li>
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://kennethsolomon.com">
+                        <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444-7 5.444V19h14z"></path>
+                            </g>
+                        </svg>                <span class="sr-only">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://kennethsolomon.com">
+                        <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z"></path>
+                            </g>
+                        </svg>                <span class="sr-only">Pinkary</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main" class="flex-grow leading-relaxed w-full max-w-5xl mx-auto">
+            <div class="mt-4 mx-4">
+                <h1 class="text-6xl text-zinc-800 dark:text-zinc-300 font-semibold mb-12 font-jolly">
+                    Hi, I'm Kenneth!
+                </h1>
+
+                <div class="mb-4">
+                    <nav class="mt-8">
+                        <div class="flex justify-between items-baseline">
+                            <h2 class="text-2xl text-zinc-700 dark:text-zinc-400 mb-2 font-serif">Latest blog posts</h2>
+                            <a href="https://kennethsolomon.com/posts" aria-label="Read some of my other blog posts." class="text-lg text-teal-500 hover:text-teal-600 font-serif">Browse all blog posts</a>
+                        </div>
+                        <ul class="mt-4 grid md:grid-cols-3 gap-6">
+                            <li>
+                                <a href="#" class="block w-full h-full">
+                                    <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">Why You Should Attend Laracon</h3>
+                                    <span class="text-xs text-zinc-700 dark:text-zinc-500">08/02/2024</span>
+                                    <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">There are many reasons to attend Laracon, but one stands out head and shoulders above the rest. Let me explain…</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block w-full h-full">
+                                    <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">My PHPStorm Setup</h3>
+                                    <span class="text-xs text-zinc-700 dark:text-zinc-500">06/10/2023</span>
+                                    <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">I often get questions about my setup in PHPStorm, so here is a quick primer on how I set up my IDE.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block w-full h-full">
+                                    <h3 class="text-lg text-zinc-800 dark:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">Prompting for missing input in Artisan commands</h3>
+                                    <span class="text-xs text-zinc-700 dark:text-zinc-500">02/02/2023</span>
+                                    <p class="mt-1 text-xs text-zinc-700 dark:text-zinc-500 line-clamp-3">In the past, I've talked about having fallback prompts for arguments in CLI apps. Now, Laravel can do the heavy lifting for you! Let's take a look.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex justify-center my-8">
+                    <span class="h-2 w-2 bg-gray-300 rounded-full mr-2"></span>
+                    <span class="h-2 w-2 bg-gray-300 rounded-full mr-2"></span>
+                    <span class="h-2 w-2 bg-gray-300 rounded-full"></span>
+                </div>
+
+                <div class="max-w-5xl prose print:prose-sm dark:prose-invert prose-a:text-teal hover:prose-a:text-teal-dark">
+                    <p><img src="{{url('me.png')}}" alt="Kenneth Solomon Selfie"></p>
+                    <div class="mt-5 text-zinc-100 dark:text-zinc-400">
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">Hello there! I'm a web developer based in the Philippines, and I've been immersed in the world of coding since 2020. Over time,
+                            I've gathered a toolkit that includes PHP, JavaScript, CSS, and HTML—essentials for my daily projects. While I'm no stranger to Django and Wordpress,
+                            my true passion lies with Laravel, Alpine JS, Inertia, Tailwind CSS, Vue, and Nuxt. These technologies have become my trusted companions,
+                            accompanying me on almost every coding journey.</p>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">One of the aspects of software development that excites me the most is the pursuit of the perfect architecture for a given task.
+                            There's nothing quite like that "eureka" moment after multiple refactors and countless cups of tea. It's the culmination of creativity and problem-solving skills that
+                            makes this field endlessly fascinating to me.</p>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">My favourite part of developing software is that feeling when, perhaps after several refactors and a few too many cups
+                            of tea, you find the perfect architecture for the task at hand.</p>
+                        <h2 class="text-2xl font-serif mt-5">Why is your site so basic?</h2>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">This website serves as my digital playground—a canvas where I can share my thoughts, ideas, and tutorials with the world.
+                            I've intentionally kept the design simple and minimalist for a specific reason: speed. By prioritizing simplicity,
+                            I ensure that content loads swiftly on any device or connection. In fact, this site loads in less than a second, even on a 3G network. Simple doesn't mean lacking;
+                            it means efficient and accessible.</p>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">I believe in the power of content over flashy visuals or unnecessary features. This website is all about delivering value to
+                            visitors without any distractions. There are no tracking mechanisms or attempts to sell you something you don't need—just pure, unadulterated content. It's my way of saying,
+                            "Here's what I have to offer; take it or leave it."</p>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">Feel free to check
+                            them out (or don't, you have free will). If you want to reach out and chat code, I'm all ears! You can reach me at any
+                            of my links listed <a class="text-teal-500" href="https://pinkary.com/@LukeDowning19">here</a>.</p>
+                        <h2 class="text-2xl font-serif mt-5">Fun facts about me ☕</h2>
+                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">Beyond coding, I have a few other interests that keep me busy. I love hosting podcasts, where I get to explore topics beyond
+                            the realm of programming. Occasionally, I also dabble in video editing, adding another creative dimension to my skill set. And when it's time to unwind, you'll often find
+                            me immersed in the world of mobile gaming, with Mobile Legends being a particular favorite.</p>
+                    </div>
+                </div>
             </div>
-        @endif
-
-        <pre>
-
-            <x-torchlight-code language="php">
-                {!! $html !!}
-            </x-torchlight-code>
-        </pre>
-    </div>
-</body>
+        </main>
+        <footer class="mt-12 mb-6 w-full max-w-5xl mx-auto flex flex-col items-center justify-center px-4 print:hidden">
+            <ul class="flex items-baseline space-x-4">
+                <li>
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://kennethsolomon.com">
+                        <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-teal-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444-7 5.444V19h14z"></path>
+                            </g>
+                        </svg>                <span class="sr-only">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://pinkary.com/@LukeDowning19">
+                        <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-pink-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z"></path>
+                            </g>
+                        </svg>                <span class="sr-only">Pinkary</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="flex justify-center my-8">
+                <span class="h-2 w-2 bg-gray-300 rounded-full mr-2"></span>
+                <span class="h-2 w-2 bg-gray-300 rounded-full mr-2"></span>
+                <span class="h-2 w-2 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mb-2 text-sm text-zinc-700 dark:text-zinc-400 flex flex-col space-y-2 items-center">
+                <span class="block text-center text-[1.1rem] mb-2">
+                    {!! \Illuminate\Foundation\Inspiring::quote() !!}
+                </span>
+                <span class="block text-center">© {{ date("Y") }} Kenneth Solomon</span>
+            </div>
+{{--            <nav>--}}
+{{--                <ul class="mt-4 flex space-x-2 divide-x divide-zinc-400 text-sm text-zinc-500 dark:text-zinc-300">--}}
+{{--                    <li>--}}
+{{--                        <a href="https://kennethsolomon.com/feed" class="ml-2 hover:text-zinc-700 hover:dark:text-zinc-50">--}}
+{{--                            RSS Feed--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </nav>--}}
+        </footer>
+    </body>
 </html>
 
 

@@ -1,10 +1,15 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
+use League\CommonMark\MarkdownConverter;
+use Wink\WinkPost;
+use Torchlight\Commonmark\V2\TorchlightExtension;
 
+
+use Torchlight\Block;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +42,16 @@ use Inertia\Inertia;
 
 require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return view('portfolio');
+Route::get('/', function (Block $block) {
+    $html = WinkPost::first()->body;
+    $environment = new Environment();
+
+    $environment->addExtension(new CommonMarkCoreExtension());
+    $environment->addExtension(new GithubFlavoredMarkdownExtension());
+    $environment->addExtension(new TorchlightExtension());
+
+    $converter = new MarkdownConverter($environment);
+    $converted = $converter->convert($html);
+
+    return view('portfolio', compact('converted'));
 });
