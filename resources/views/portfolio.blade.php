@@ -10,7 +10,7 @@
 
         <link href="https://fonts.cdnfonts.com/css/jolly-lodger" rel="stylesheet">
     </head>
-    <body background="{{url('bg.jpg')}}" class="bg-repeat md:bg-no-repeat md:bg-cover   print:bg-transparent dark:bg-zinc-900 ">
+    <body background="{{url('/storage/bg.jpg')}}" class="bg-repeat md:bg-no-repeat md:bg-cover   print:bg-transparent dark:bg-zinc-900 ">
         <nav class="w-full max-w-5xl mx-auto flex justify-end pt-4 pr-4 print:hidden mb-4" role="navigation" aria-label="Main">
             <ul class="space-x-4 bg-zinc-900 dark:bg-zinc-200 rounded-full px-3 py-1 flex items-center">
                 <li>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="max-w-5xl prose print:prose-sm dark:prose-invert prose-a:text-teal hover:prose-a:text-teal-dark">
-                    <img id="banner" src="{{url('me.png')}}" alt="Kenneth Solomon Selfie">
+                    <img id="banner" src="{{url('/storage/me.png')}}" alt="Kenneth Solomon Selfie">
                     <div class="mt-5 text-zinc-100 dark:text-zinc-400">
                         <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">Hello there! I'm a web developer based in the Philippines, and I've been immersed in the world of coding since 2020. Over time,
                             I've gathered a toolkit that includes PHP, JavaScript, CSS, and HTML—essentials for my daily projects. While I'm no stranger to Django and Wordpress,
