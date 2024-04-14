@@ -20,11 +20,11 @@
         @inertiaHead
 
     </head>
-    <body background="{{url('/storage/bg.jpg')}}" class="min-h-screen bg-repeat md:bg-no-repeat md:bg-cover print:bg-transparent dark:bg-zinc-900 relative">
+    <body background="{{url('/storage/bg.jpg')}}" class="min-h-screen bg-repeat md:bg-no-repeat md:bg-cover print:bg-transparent bg-zinc-900 relative">
     <nav class="w-full max-w-5xl mx-auto flex justify-end pt-4 pr-4 print:hidden mb-4" role="navigation" aria-label="Main">
-        <ul class="space-x-4 bg-zinc-900 dark:bg-zinc-200 rounded-full px-3 py-1 flex items-center">
+        <ul class="space-x-4 bg-zinc-200 rounded-full px-3 py-1 flex items-center">
             <li>
-                <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="/">
+                <a class="text-zinc-900 transition hover:text-teal" href="/">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"fill="currentColor">
                         <g>
                             <path fill="none" d="M0 0h24v24H0z"></path>
@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li>
-                <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://pinkary.com/@kennethsolomon">
+                <a class="text-zinc-900 transition hover:text-pink-500" href="https://pinkary.com/@kennethsolomon">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                         <g>
                             <path fill="none" d="M0 0h24v24H0z"></path>
