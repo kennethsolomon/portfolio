@@ -67,4 +67,10 @@ class PostController extends Controller
             'content' => $converted->getContent(),
         ]);
     }
+
+    public function create()
+    {
+        return inertia('Post/Create');
+    }
+
 }

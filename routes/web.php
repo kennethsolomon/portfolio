@@ -63,3 +63,5 @@ Route::get('/', PortfolioController::class)->name('home');
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::post('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/{id}/{slug}', [PostController::class, 'show'])->name('posts.show');
+
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
