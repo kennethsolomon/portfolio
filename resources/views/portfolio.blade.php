@@ -43,17 +43,17 @@
 
                 <div class="mb-4">
                     <nav class="mt-8">
-                        <div class="flex justify-between items-baseline">
-                            <h2 class="text-2xl text-zinc-200 mb-2 font-serif">Latest blog posts</h2>
-                            <a href="/posts" aria-label="Read some of my other blog posts." class="text-lg text-teal-500 hover:text-teal-600 font-serif">Browse all blog posts</a>
+                        <div class="flex justify-between items-baseline group">
+                            <h2 class="text-xl md:text-2xl text-zinc-200 mb-2 font-serif">Latest blog posts</h2>
+                            <a href="/posts" aria-label="Read some of my other blog posts." class="text-md md:text-lg text-teal-500 hover:text-teal-600 font-serif">Browse all blog posts</a>
                         </div>
                         <ul class="mt-4 grid md:grid-cols-3 gap-6">
                             @foreach($posts as $post)
-                                <li>
+                                <li class="group">
                                     <a href="/posts/{{$post['id']}}/{{$post['slug']}}" class="block w-full h-full">
-                                        <h3 class="text-lg text-zinc-300 leading-tight md:line-clamp-1 font-extrabold">{{$post['title']}}</h3>
-                                        <span class="text-xs text-zinc-400">{{$post['publish_date']}}</span>
-                                        <p class="mt-1 text-xs text-zinc-400 line-clamp-3">{{$post['excerpt']}}</p>
+                                        <h3 class="text-lg text-zinc-300 group-hover:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">{{$post['title']}}</h3>
+                                        <span class="text-xs text-zinc-400 group-hover:text-zinc-500">{{$post['publish_date']}}</span>
+                                        <p class="mt-1 text-xs text-zinc-400 group-hover:text-zinc-500 line-clamp-3">{{$post['excerpt']}}</p>
                                     </a>
                                 </li>
                             @endforeach
