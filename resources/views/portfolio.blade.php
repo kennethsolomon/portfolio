@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+{{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Kenneth Solomon</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        @vite(['resources/js/app.js'])
 
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.cdnfonts.com/css/jolly-lodger" rel="stylesheet">
     </head>
     <body background="{{url('bg.jpg')}}" class="bg-repeat md:bg-no-repeat md:bg-cover   print:bg-transparent dark:bg-zinc-900 ">
@@ -21,7 +15,7 @@
             <ul class="space-x-4 bg-zinc-900 dark:bg-zinc-200 rounded-full px-3 py-1 flex items-center">
                 <li>
                     <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="/">
-                        <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>
                                 <path d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444-7 5.444V19h14z"></path>
@@ -31,7 +25,7 @@
                 </li>
                 <li>
                     <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-pink-500" href="https://pinkary.com/@kennethsolomon">
-                        <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>
                                 <path d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z"></path>
@@ -74,31 +68,37 @@
                 </div>
 
                 <div class="max-w-5xl prose print:prose-sm dark:prose-invert prose-a:text-teal hover:prose-a:text-teal-dark">
-                    <p><img src="{{url('me.png')}}" alt="Kenneth Solomon Selfie"></p>
+                    <img id="banner" src="{{url('me.png')}}" alt="Kenneth Solomon Selfie">
                     <div class="mt-5 text-zinc-100 dark:text-zinc-400">
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">Hello there! I'm a web developer based in the Philippines, and I've been immersed in the world of coding since 2020. Over time,
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">Hello there! I'm a web developer based in the Philippines, and I've been immersed in the world of coding since 2020. Over time,
                             I've gathered a toolkit that includes PHP, JavaScript, CSS, and HTML—essentials for my daily projects. While I'm no stranger to Django and Wordpress,
                             my true passion lies with Laravel, Alpine JS, Inertia, Tailwind CSS, Vue, and Nuxt. These technologies have become my trusted companions,
                             accompanying me on almost every coding journey.</p>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">One of the aspects of software development that excites me the most is the pursuit of the perfect architecture for a given task.
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">One of the aspects of software development that excites me the most is the pursuit of the perfect architecture for a given task.
                             There's nothing quite like that "eureka" moment after multiple refactors and countless cups of tea. It's the culmination of creativity and problem-solving skills that
                             makes this field endlessly fascinating to me.</p>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">My favourite part of developing software is that feeling when, perhaps after several refactors and a few too many cups
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">My favourite part of developing software is that feeling when, perhaps after several refactors and a few too many cups
                             of tea, you find the perfect architecture for the task at hand.</p>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">In addition to building web applications, I specialize in API integration. I have experience working with APIs from platforms such as HubSpot, Cin7, Dropbox, Xero, and more. Integrating these APIs seamlessly into web applications allows for enhanced functionality and streamlined workflows, providing users with a cohesive experience across multiple platforms.</p>
-                        <h2 class="text-2xl font-serif mt-5">Why is your site so basic?</h2>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">This website serves as my digital playground—a canvas where I can share my thoughts, ideas, and tutorials with the world.
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">In addition to building web applications, I specialize in API integration.
+                            I have experience working with APIs from platforms such as HubSpot, Cin7, Dropbox, Xero, and more. Integrating these APIs seamlessly into web applications
+                            allows for enhanced functionality and streamlined workflows, providing users with a cohesive experience across multiple platforms.</p>
+
+                        <h2 class="text-2xl font-serif mt-10 text-zinc-300">Why is your site so basic?</h2>
+
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">This website serves as my digital playground—a canvas where I can share my thoughts, ideas, and tutorials with the world.
                             I've intentionally kept the design simple and minimalist for a specific reason: speed. By prioritizing simplicity,
                             I ensure that content loads swiftly on any device or connection. In fact, this site loads in less than a second, even on a 3G network. Simple doesn't mean lacking;
                             it means efficient and accessible.</p>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">I believe in the power of content over flashy visuals or unnecessary features. This website is all about delivering value to
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">I believe in the power of content over flashy visuals or unnecessary features. This website is all about delivering value to
                             visitors without any distractions. There are no tracking mechanisms or attempts to sell you something you don't need—just pure, unadulterated content. It's my way of saying,
                             "Here's what I have to offer; take it or leave it."</p>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">Feel free to check
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">Feel free to check
                             them out (or don't, you have free will). If you want to reach out and chat code, I'm all ears! You can reach me at any
-                            of my links listed <a class="text-teal-500" href="https://pinkary.com/@kennethsolomon">here</a>.</p>
-                        <h2 class="text-2xl font-serif mt-5">Fun facts about me ☕</h2>
-                        <p class="text-zinc-800 dark:text-zinc-400 mt-3">Beyond coding, I have a few other interests that keep me busy. I love hosting podcasts, where I get to explore topics beyond
+                            of my links listed <a class="text-teal-500 hover:text-teal-400 tracking-wider" href="https://pinkary.com/@kennethsolomon">here</a>.</p>
+
+                        <h2 class="text-2xl font-serif mt-10 text-zinc-300">Fun facts about me ☕</h2>
+
+                        <p class="text-zinc-800 dark:text-zinc-300 mt-5 font-serif tracking-wider">Beyond coding, I have a few other interests that keep me busy. I love hosting podcasts, where I get to explore topics beyond
                             the realm of programming. Occasionally, I also dabble in video editing, adding another creative dimension to my skill set. And when it's time to unwind, you'll often find
                             me immersed in the world of mobile gaming, with Mobile Legends being a particular favorite.</p>
                     </div>
@@ -109,7 +109,7 @@
             <ul class="flex items-baseline space-x-4">
                 <li>
                     <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="/">
-                        <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-teal-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="h-8 w-8 text-zinc-900 dark:text-zinc-300 transition hover:text-teal-dark" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>
                                 <path d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444-7 5.444V19h14z"></path>
@@ -119,7 +119,7 @@
                 </li>
                 <li>
                     <a class="text-zinc-50 dark:text-zinc-900 transition hover:text-teal" href="https://pinkary.com/@kennethsolomon">
-                        <svg class="h-8 text-zinc-900 dark:text-zinc-300 transition hover:text-pink-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="h-8 w-8 text-zinc-900 dark:text-zinc-300 transition hover:text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"></path>
                                 <path d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z"></path>
@@ -153,3 +153,6 @@
 </html>
 
 
+<script>
+    const banner = document.querySelector('#banner');
+</script>
