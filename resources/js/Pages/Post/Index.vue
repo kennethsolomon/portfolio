@@ -41,7 +41,7 @@ const searchPost = () => form.post(route('posts.index'), {
 
             <div class="mt-5">
                 <div v-for="post in posts" key="post.id">
-                    <Link :href="'/posts/'+post.id+'/'+post.slug" class="block group">
+                    <Link :href="'/posts/'+post.id+'/'+post.slug" class="block group mt-5">
                         <p class="text-lg sm:text-xl md:text-2xl text-zinc-300 group-hover:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold" v-text="post.title"></p>
                         <span class="text-xs md:text-sm text-zinc-400 group-hover:text-zinc-500" v-text="post.publish_date"></span>
                         <p class="text-md md:text-xl mt-1 text-zinc-400 group-hover:text-zinc-500 line-clamp-3" v-text="post.excerpt"></p>
