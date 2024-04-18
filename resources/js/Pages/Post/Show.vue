@@ -18,7 +18,7 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Blog" />
 
     <div class="flex-grow leading-relaxed w-full max-w-5xl mx-auto">
         <div class="mt-12 mx-4">

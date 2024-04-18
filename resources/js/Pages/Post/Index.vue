@@ -24,7 +24,7 @@ const searchPost = () => form.post(route('posts.index'), {
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Blog" />
 
     <div class="flex-grow leading-relaxed w-full max-w-5xl mx-auto">
         <div class="mt-4 mx-4">
