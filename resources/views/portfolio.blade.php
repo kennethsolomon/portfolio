@@ -61,6 +61,28 @@
                     </nav>
                 </div>
 
+                @if(!empty($videos))
+                    <div class="mb-4">
+                        <nav class="mt-8">
+                            <div class="flex justify-between items-baseline group">
+                                <h2 class="text-xl md:text-2xl text-zinc-200 mb-2 font-serif">Latest Videos</h2>
+                                <a href="https://www.youtube.com/@mr.kennethsolomon/videos" aria-label="Read some of my other blog posts." class="text-md md:text-lg text-teal-500 hover:text-teal-600 font-serif">Browse all videos</a>
+                            </div>
+                            <ul class="mt-4 grid md:grid-cols-3 gap-6">
+                                @foreach($videos as $video)
+                                    <li class="group">
+                                        <a href="{{$video['video_url']}}" class="block w-full h-full" target="_blank">
+                                            <img src="{{$video['image_url']}}" alt="{{$video['title']}}">
+                                            <h3 class="mt-2 text-lg text-zinc-300 group-hover:text-zinc-400 leading-tight md:line-clamp-1 font-extrabold">{{$video['title']}}</h3>
+                                            <p class="mt-1 text-xs text-zinc-400 group-hover:text-zinc-500 line-clamp-3">{{$video['description']}}</p>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </nav>
+                    </div>
+                @endif
+
                 <div class="flex justify-center my-8">
                     <span class="h-2 w-2 bg-gray-300 rounded-full mr-2"></span>
                     <span class="h-2 w-2 bg-gray-300 rounded-full mr-2"></span>
