@@ -92,35 +92,35 @@
                 <div class="max-w-5xl prose print:prose-sm dark:prose-invert prose-a:text-teal hover:prose-a:text-teal-dark">
                     <img id="banner" src="{{url('/storage/me.png')}}" alt="Kenneth Solomon Selfie">
                     <div class="mt-5 text-zinc-400">
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">Hello there! I'm a web developer based in the Philippines, and I've been immersed in the world of coding since 2020. Over time,
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wider text-justify">Hello there! I'm a web developer based in the Philippines, and I've been immersed in the world of coding since 2020. Over time,
                             I've gathered a toolkit that includes PHP, JavaScript, CSS, and HTML—essentials for my daily projects. While I'm no stranger to Django and Wordpress,
                             my true passion lies with Laravel, Alpine JS, Inertia, Tailwind CSS, Vue, and Nuxt. These technologies have become my trusted companions,
                             accompanying me on almost every coding journey.</p>
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">One of the aspects of software development that excites me the most is the pursuit of the perfect architecture for a given task.
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wider text-justify">One of the aspects of software development that excites me the most is the pursuit of the perfect architecture for a given task.
                             There's nothing quite like that "eureka" moment after multiple refactors and countless cups of tea. It's the culmination of creativity and problem-solving skills that
                             makes this field endlessly fascinating to me.</p>
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">My favourite part of developing software is that feeling when, perhaps after several refactors and a few too many cups
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wide text-justify">My favourite part of developing software is that feeling when, perhaps after several refactors and a few too many cups
                             of tea, you find the perfect architecture for the task at hand.</p>
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">In addition to building web applications, I specialize in API integration.
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wide text-justify">In addition to building web applications, I specialize in API integration.
                             I have experience working with APIs from platforms such as HubSpot, Cin7, Dropbox, Xero, and more. Integrating these APIs seamlessly into web applications
                             allows for enhanced functionality and streamlined workflows, providing users with a cohesive experience across multiple platforms.</p>
 
                         <h2 class="text-zinc-300 text-2xl font-serif mt-10">Why is your site so basic?</h2>
 
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">This website serves as my digital playground—a canvas where I can share my thoughts, ideas, and tutorials with the world.
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wide text-justify">This website serves as my digital playground—a canvas where I can share my thoughts, ideas, and tutorials with the world.
                             I've intentionally kept the design simple and minimalist for a specific reason: speed. By prioritizing simplicity,
                             I ensure that content loads swiftly on any device or connection. In fact, this site loads in less than a second, even on a 3G network. Simple doesn't mean lacking;
                             it means efficient and accessible.</p>
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">I believe in the power of content over flashy visuals or unnecessary features. This website is all about delivering value to
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wide text-justify">I believe in the power of content over flashy visuals or unnecessary features. This website is all about delivering value to
                             visitors without any distractions. There are no tracking mechanisms or attempts to sell you something you don't need—just pure, unadulterated content. It's my way of saying,
                             "Here's what I have to offer; take it or leave it."</p>
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">Feel free to check
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wide text-justify">Feel free to check
                             them out (or don't, you have free will). If you want to reach out and chat code, I'm all ears! You can reach me at any
                             of my links listed <a class="text-teal-500 hover:text-teal-400 tracking-wider" href="https://pinkary.com/@kennethsolomon">here</a>.</p>
 
                         <h2 class="text-zinc-300 text-2xl font-serif mt-10">Fun facts about me ☕</h2>
 
-                        <p class="text-zinc-300 mt-5 font-serif tracking-wider">Beyond coding, I have a few other interests that keep me busy. I love hosting podcasts, where I get to explore topics beyond
+                        <p class="text-zinc-300 mt-5 font-serif tracking-wide text-justify">Beyond coding, I have a few other interests that keep me busy. I love hosting podcasts, where I get to explore topics beyond
                             the realm of programming. Occasionally, I also dabble in video editing, adding another creative dimension to my skill set. And when it's time to unwind, you'll often find
                             me immersed in the world of mobile gaming, with Mobile Legends being a particular favorite.</p>
                     </div>
